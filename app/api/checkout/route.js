@@ -54,8 +54,8 @@ export const POST = async (request,response) =>  {
     mode: 'payment',
     payment_method_types: ['card'],
     customer_email: email,
-    success_url: `http://localhost:3000/success`,
-    cancel_url: `http://localhost:3000/cancel`,
+    success_url: `https://e-commerce-gamma-fawn.vercel.app/success`,
+    cancel_url: `https://e-commerce-gamma-fawn.vercel.app/cancel`,
     metadata: {orderId:order._id.toString()},
   });
 return new Response(JSON.stringify(session.url), { status: 200 })
